@@ -1,0 +1,544 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>BLACK DIAMOND MOTORS</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <style>
+
+    *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
+      font-family:'Poppins',sans-serif;
+      scroll-behavior:smooth;
+    }
+
+    body{
+      background:#050505;
+      color:white;
+      overflow-x:hidden;
+    }
+
+    /* NAVBAR */
+
+    header{
+      width:100%;
+      padding:22px 8%;
+      position:fixed;
+      top:0;
+      left:0;
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      z-index:1000;
+
+      background:rgba(0,0,0,0.45);
+      backdrop-filter:blur(12px);
+    }
+
+    .logo{
+      font-size:38px;
+      font-weight:800;
+      letter-spacing:2px;
+    }
+
+    .logo span{
+      color:red;
+    }
+
+    nav a{
+      color:white;
+      text-decoration:none;
+      margin-left:35px;
+      font-weight:500;
+      transition:0.3s;
+    }
+
+    nav a:hover{
+      color:red;
+    }
+
+    /* HERO */
+
+    .hero{
+      width:100%;
+      height:100vh;
+
+      background:
+      linear-gradient(to right, rgba(0,0,0,0.8), rgba(0,0,0,0.3)),
+      url('https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?q=80&w=1800&auto=format&fit=crop');
+
+      background-size:cover;
+      background-position:center;
+
+      display:flex;
+      align-items:center;
+      padding:0 8%;
+    }
+
+    .hero-text{
+      max-width:700px;
+    }
+
+    .hero-text h1{
+      font-size:90px;
+      line-height:1;
+      margin-bottom:25px;
+      font-weight:800;
+    }
+
+    .hero-text span{
+      color:red;
+    }
+
+    .hero-text p{
+      font-size:18px;
+      line-height:1.9;
+      color:#d6d6d6;
+      margin-bottom:40px;
+    }
+
+    .btn{
+      display:inline-block;
+      padding:16px 38px;
+      border-radius:50px;
+      text-decoration:none;
+      font-weight:600;
+      transition:0.4s;
+    }
+
+    .btn-primary{
+      background:linear-gradient(to right,#ff0000,#8b0000);
+      color:white;
+      box-shadow:0 0 25px rgba(255,0,0,0.5);
+    }
+
+    .btn-primary:hover{
+      transform:translateY(-5px);
+      box-shadow:0 0 35px rgba(255,0,0,0.8);
+    }
+
+    /* SECTION */
+
+    section{
+      padding:120px 8%;
+    }
+
+    .section-title{
+      text-align:center;
+      margin-bottom:70px;
+    }
+
+    .section-title h2{
+      font-size:60px;
+      font-weight:800;
+    }
+
+    .section-title span{
+      color:red;
+    }
+
+    .section-title p{
+      color:#aaa;
+      margin-top:15px;
+    }
+
+    /* CARD */
+
+    .cars-container{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(350px,1fr));
+      gap:35px;
+    }
+
+    .car-card{
+      background:#111;
+      border-radius:30px;
+      overflow:hidden;
+      transition:0.5s;
+      border:1px solid rgba(255,255,255,0.08);
+    }
+
+    .car-card:hover{
+      transform:translateY(-15px);
+      box-shadow:0 15px 40px rgba(255,0,0,0.2);
+    }
+
+    .car-card img{
+      width:100%;
+      height:260px;
+      object-fit:cover;
+    }
+
+    .car-content{
+      padding:30px;
+    }
+
+    .car-content h3{
+      font-size:34px;
+      margin-bottom:15px;
+    }
+
+    .car-content p{
+      color:#bbb;
+      line-height:1.8;
+      margin-bottom:25px;
+    }
+
+    .price{
+      font-size:35px;
+      color:red;
+      font-weight:800;
+      margin-bottom:25px;
+    }
+
+    .btn-wa{
+      display:inline-block;
+      padding:15px 28px;
+      border-radius:50px;
+      background:#25D366;
+      color:white;
+      text-decoration:none;
+      font-weight:600;
+      transition:0.3s;
+    }
+
+    .btn-wa:hover{
+      background:#1ebe5d;
+      transform:scale(1.05);
+    }
+
+    /* FITUR */
+
+    .features{
+      background:#0b0b0b;
+    }
+
+    .features-container{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+      gap:30px;
+    }
+
+    .feature-box{
+      background:#151515;
+      padding:45px 35px;
+      border-radius:30px;
+      transition:0.4s;
+      text-align:center;
+    }
+
+    .feature-box:hover{
+      transform:translateY(-10px);
+      border:1px solid red;
+    }
+
+    .feature-box h3{
+      margin:20px 0;
+      font-size:26px;
+      color:red;
+    }
+
+    .feature-box p{
+      color:#bbb;
+      line-height:1.8;
+    }
+
+    /* FOOTER */
+
+    footer{
+      padding:40px;
+      background:black;
+      text-align:center;
+      color:#888;
+    }
+
+    /* FLOAT WA */
+
+    .float-wa{
+      position:fixed;
+      bottom:25px;
+      right:25px;
+      background:#25D366;
+      color:white;
+      text-decoration:none;
+      padding:16px 26px;
+      border-radius:50px;
+      font-weight:600;
+      z-index:999;
+      box-shadow:0 10px 30px rgba(0,0,0,0.4);
+    }
+
+    .float-wa:hover{
+      background:#1ebe5d;
+    }
+
+    /* RESPONSIVE */
+
+    @media(max-width:768px){
+
+      header{
+        flex-direction:column;
+      }
+
+      nav{
+        margin-top:15px;
+      }
+
+      .hero{
+        text-align:center;
+        justify-content:center;
+      }
+
+      .hero-text h1{
+        font-size:50px;
+      }
+
+      .hero-text p{
+        font-size:16px;
+      }
+
+    }
+
+  </style>
+
+</head>
+<body>
+
+  <!-- NAVBAR -->
+
+  <header>
+
+    <div class="logo">
+      BLACK<span>DIAMOND</span>
+    </div>
+
+    <nav>
+      <a href="#">Home</a>
+      <a href="#cars">Cars</a>
+      <a href="#features">Features</a>
+      <a href="#contact">Contact</a>
+    </nav>
+
+  </header>
+
+  <!-- HERO -->
+
+  <section class="hero">
+
+    <div class="hero-text">
+
+      <h1>
+        Luxury Cars <br>
+        For <span>Luxury Life</span>
+      </h1>
+
+      <p>
+        Dealer mobil premium dengan desain modern,
+        performa mewah, dan pelayanan eksklusif.
+      </p>
+
+      <a href="#cars" class="btn btn-primary">
+        Explore Cars
+      </a>
+
+    </div>
+
+  </section>
+
+  <!-- CARS -->
+
+  <section id="cars">
+
+    <div class="section-title">
+
+      <h2>
+        Premium <span>Collection</span>
+      </h2>
+
+      <p>
+        Mobil mewah dengan desain elegan dan performa tinggi.
+      </p>
+
+    </div>
+
+    <div class="cars-container">
+
+      <!-- CARD 1 -->
+
+      <div class="car-card">
+
+        <img src="https://images.unsplash.com/photo-1555215695-3004980ad54e?q=80&w=1200&auto=format&fit=crop">
+
+        <div class="car-content">
+
+          <h3>Toyota Supra</h3>
+
+          <p>
+            Mobil sport futuristik dengan performa tinggi dan desain premium.
+          </p>
+
+          <div class="price">
+            Rp850 Juta
+          </div>
+
+          <a href="https://wa.me/6283151922071?text=Halo%20saya%20ingin%20membeli%20Toyota%20Supra"
+          class="btn-wa">
+
+            Order via WhatsApp
+
+          </a>
+
+        </div>
+
+      </div>
+
+      <!-- CARD 2 -->
+
+      <div class="car-card">
+
+        <img src="https://images.unsplash.com/photo-1503376780353-7e6692767b70?q=80&w=1200&auto=format&fit=crop">
+
+        <div class="car-content">
+
+          <h3>BMW M4</h3>
+
+          <p>
+            Sedan premium dengan interior mewah dan teknologi modern.
+          </p>
+
+          <div class="price">
+            Rp1,2 Miliar
+          </div>
+
+          <a href="https://wa.me/6283151922071?text=Halo%20saya%20ingin%20membeli%20BMW%20M4"
+          class="btn-wa">
+
+            Order via WhatsApp
+
+          </a>
+
+        </div>
+
+      </div>
+
+      <!-- CARD 3 -->
+
+      <div class="car-card">
+
+        <img src="https://images.unsplash.com/photo-1494905998402-395d579af36f?q=80&w=1200&auto=format&fit=crop">
+
+        <div class="car-content">
+
+          <h3>Mercedes AMG</h3>
+
+          <p>
+            Mobil luxury dengan kenyamanan premium dan desain eksklusif.
+          </p>
+
+          <div class="price">
+            Rp1,5 Miliar
+          </div>
+
+          <a href="https://wa.me/6283151922071?text=Halo%20saya%20ingin%20membeli%20Mercedes%20AMG"
+          class="btn-wa">
+
+            Order via WhatsApp
+
+          </a>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- FEATURES -->
+
+  <section class="features" id="features">
+
+    <div class="section-title">
+
+      <h2>
+        Why Choose <span>Us?</span>
+      </h2>
+
+    </div>
+
+    <div class="features-container">
+
+      <div class="feature-box">
+
+        <h3>🚗 Premium Quality</h3>
+
+        <p>
+          Semua mobil berkualitas tinggi dan original.
+        </p>
+
+      </div>
+
+      <div class="feature-box">
+
+        <h3>💳 Easy Financing</h3>
+
+        <p>
+          Cicilan mudah dengan proses cepat dan aman.
+        </p>
+
+      </div>
+
+      <div class="feature-box">
+
+        <h3>🛠️ Official Warranty</h3>
+
+        <p>
+          Mendapatkan garansi resmi dan service terpercaya.
+        </p>
+
+      </div>
+
+      <div class="feature-box">
+
+        <h3>🔥 Luxury Experience</h3>
+
+        <p>
+          Pelayanan eksklusif dengan showroom premium.
+        </p>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- FOOTER -->
+
+  <footer id="contact">
+
+    <p>
+      © 2026 BLACK DIAMOND MOTORS | Luxury Car Dealer
+    </p>
+
+  </footer>
+
+  <!-- FLOAT WA -->
+
+  <a href="https://wa.me/6283151922071"
+  class="float-wa">
+
+    WhatsApp
+
+  </a>
+
+</body>
+</html>
